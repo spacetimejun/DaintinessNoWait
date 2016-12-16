@@ -1,0 +1,99 @@
+  
+<!--预约界面-->
+ <ion-view class='bg'>
+ 	
+  <!--头部-->	
+  <ion-header-bar align-title='center'>
+  	<span class="title">排队预约</span>
+  	<i class="icon ion-search right"></i>
+  </ion-header-bar>
+  <div class="bar bar-subheader">
+	  <ul>
+	  	<li>
+	  		附近
+	  		<i class="icon ion-android-arrow-dropdown"></i>
+	  	</li>
+	  	<li>
+	  		全部菜系
+	  		<i class="icon ion-android-arrow-dropdown"></i>
+	  	</li>
+	  	<li>
+	  		只能排序
+	  		<i class="icon ion-android-arrow-dropdown"></i>
+	  	</li>
+	  	<li>
+	  		筛选
+	  		<i class="icon ion-android-arrow-dropdown"></i>
+	  	</li>
+	  </ul>
+	</div>
+	
+  
+  <ion-content class="has-header has-subheader order" >
+  	
+    <div class="list">
+			<a class="item item-thumbnail-left" href="#/detail/{{item.id}}" ng-repeat="item in list">
+	      <img ng-src="{{item.img}}">
+	      <h2 class='itemName'>{{item.name}}</h2>
+	      <P>
+	      		<span style="color: gold;">
+		      		<i class="icon {{item.star.star1}}"></i>
+		      		<i class="icon {{item.star.star2}}"></i>
+		      		<i class="icon {{item.star.star3}}"></i>
+		      		<i class="icon {{item.star.star4}}"></i>
+		      		<i class="icon {{item.star.star5}}"></i>
+	      		</span>
+	      		&nbsp;&nbsp;
+	      		<span class="itemPrice">{{item.price | currency:"&yen;"}}/人</span>
+	      </p>
+	      <p class="itemPostion">
+	      	<span>{{item.style}}</span>
+	      	&nbsp;&nbsp;&nbsp;
+	      	<span>{{item.position}}</span>
+	      </p>
+				<p class="borderTop">
+					<span class="{{item.iconColor}}" >{{item.iconFont}}</span>
+					&nbsp;&nbsp;
+					{{item.iconContent}}
+				</p>
+	    </a>
+		</div>
+    
+    
+    
+    <!--上拉刷新-->
+    <ion-infinite-scroll on-infinite="getData()" immediate-check="true" ng-if="showR">
+    	<div class="list">
+    		<a class="item item-thumbnail-left" href="#" ng-repeat="item in list">
+			      <img ng-src="{{item.img}}">
+			      <h2 class='itemName'>{{item.name}}</h2>
+			      <P>
+			      		<span style="color: gold;">
+				      		<i class="icon {{item.star.star1}}"></i>
+				      		<i class="icon {{item.star.star2}}"></i>
+				      		<i class="icon {{item.star.star3}}"></i>
+				      		<i class="icon {{item.star.star4}}"></i>
+				      		<i class="icon {{item.star.star5}}"></i>
+			      		</span>
+			      		&nbsp;&nbsp;
+			      		<span class="itemPrice">{{item.price | currency:"&yen;"}}/人</span>
+			      </p>
+			      <p class="itemPostion">
+			      	<span>{{item.style}}</span>
+			      	&nbsp;&nbsp;&nbsp;
+			      	<span>{{item.position}}</span>
+			      </p>
+						<p class="borderTop">
+							<span class="{{item.iconColor}}" >{{item.iconFont}}</span>
+							&nbsp;&nbsp;
+							{{item.iconContent}}
+						</p>
+			    </a>
+			</div>
+    </ion-infinite-scroll>	
+     
+   
+  </ion-content>
+  
+  
+</ion-view>

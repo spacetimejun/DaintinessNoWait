@@ -1,0 +1,846 @@
+html{
+	font-size: 12px;
+	
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/*首页*/
+.bg{
+	background: #E6E6E6;
+}
+/*banner图*/
+.bannerImg{
+	max-width: 100%;
+	min-width: 100%;
+}
+
+/*底部tab的选中时候的颜色设置*/
+.tab-item.tab-item-active, .tab-item.active{
+	color: orangered;
+}
+
+/*搜索框 */
+#searchBox{
+	z-index: 2;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 4rem;
+	line-height: 2.5rem;
+	padding: 2%;
+	background-color: rgba(253,254,254,0.3);
+	box-shadow: 0 2px 5px lightgray;
+}
+	#searchBox button{
+		background: rgba(255,255,255,0);
+		border: 0;
+		width: 20%;
+		color: white;
+	}
+	#searchBox a{
+		color: #69717D;
+		display: inline-block;
+		width: 80%;
+		background: rgba(253,254,254,.8);
+		float: right;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 10rem;
+		font-size: 1rem;
+	}
+
+
+/*取号、预约、扫描栏*/
+#tool.list{
+	display: flex;	
+	width: 100%;
+	height: 10rem;
+	margin-bottom: 0.8rem;
+
+}
+	#tool a{
+		width: 33.3333%;
+		display: block;
+		border: 0;
+		text-align: center;
+		height: 10rem;
+	}
+	/*点击时a不变色*/
+	#tool .activated{
+	background: white;
+	}
+		#tool a i{
+			text-align: center;
+			margin: 0 auto;
+			display: block;
+			width: 4rem;
+			height: 4rem;
+			border-radius: 5rem;
+			color: white;
+			line-height: 4rem;
+			font-size: 2.5rem;
+			margin-bottom: 0.5rem;
+		}
+		#tool a:nth-child(1) i{
+			background: orangered;
+		}
+		#tool a:nth-child(2) i{
+			background: dodgerblue;
+		}
+		#tool a:nth-child(3) i{
+			background: yellow;
+		}
+		#tool a .firstspan{
+			font-size: 1.2rem;
+		}
+		#tool a .secondspan{
+			font-size: 0.8rem;
+			color: darkgray;
+		}
+
+
+
+/*预约栏*/
+#order{
+	width: 100%;
+	background: white;
+}	
+	#order p:nth-child(1){
+		line-height: 3rem;
+		height: 3rem;
+		padding:0 1rem;
+	}
+		#order p:nth-child(1) i{
+			font-size: 2rem;
+			margin: 0 0.5rem;
+			color: dodgerblue;
+		}
+		#order p:nth-child(1) span{
+			float: right;
+			font-size: 1rem;
+			margin-top: 0.5rem;
+			color: darkgray;
+		}
+	#order p:nth-child(2){
+		padding: 0.5rem 0.5rem 1rem 1.5rem;
+	}
+		#order p:nth-child(2) span{
+			background: #E6E6E6;
+			display: inline-block;
+			text-align: center;
+			padding: 0.5rem 0;
+			width: 70%;
+			font-size: 1rem;
+			color: gray;
+			border-radius: 0.2rem;
+		}
+			#order p:nth-child(2) span i{
+				float: right;
+				margin-right: 0.5rem;
+			}
+		#order p:nth-child(2) button{
+			width: 27%;
+			height: 2.8rem;
+			border: 0;
+			background: red;
+			color: white;
+			font-size: 1.2rem;
+			border-radius: 0.2rem;
+		}
+
+/*功能栏*/
+#feature{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 1rem;
+}
+#feature .item{
+	width: 50%;
+	float: left;
+	position: relative;
+}
+/*点击时a不变色*/
+	#feature .activated{
+	background: white;
+	}
+	#feature img{
+		position: absolute;
+		left: 70%;
+	}
+	#feature h2{
+		position: absolute;
+		left: 1rem;
+		font-size: 1.2rem;
+	}
+		#feature a:nth-child(1) h2{
+			color: deeppink;
+		}
+		#feature a:nth-child(2) h2{
+			color: darkslateblue;
+		}
+		#feature a:nth-child(3) h2{
+			color: orange;
+		}
+		#feature a:nth-child(4) h2{
+			color: pink;
+		}
+		#feature a:nth-child(5) h2{
+			color: seagreen;
+		}
+		#feature a:nth-child(6) h2{
+			color: deepskyblue;
+		}
+		
+	#feature p{
+		position: absolute;
+		left: 1rem;
+		top: 3rem;
+		font-size: 1rem;
+		color: darkgray;
+	}
+
+
+/*hot 热门栏*/
+#hot{
+	background: white;
+	width: 100%;
+	margin: 1rem 0;
+}
+
+	#hot p{
+		padding: 1rem;
+		border-bottom: 0.1rem solid lightgray;
+		color: gray;
+	}
+		#hot p span{
+			font-weight: bolder;
+			color: deeppink;
+		}
+	#hot a{
+		width: 33.333%;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		
+	}
+	#hot div a:nth-child(1){
+		border-bottom: 0.1rem solid lightgray;
+	}
+	#hot div a:nth-child(2){
+		border-bottom: 0.1rem solid lightgray;
+	}
+	#hot div a:nth-child(3){
+		border-bottom: 0.1rem solid lightgray;
+	}
+		#hot a img{
+			width:80%;
+		}
+		#hot a h4{
+			font-size: 1rem;
+			color: darkgray;
+			width: 100%;
+			overflow: hidden;
+		}
+
+/*精选商家 selection*/
+#selection{
+	background: white;
+	width: 100%;
+	margin: 1rem 0;
+}
+	#selection p{
+			padding: 1rem;
+			border-bottom: 0.1rem solid lightgray;
+			color: gray;
+		}
+			#selection p span{
+				font-weight: bolder;
+				color: deeppink;
+			}
+		#selection div a{
+			position: relative;
+			width: 100%;
+		}
+			#selection div a img{
+				width:100%;
+				
+			}
+			#selection div a h3{
+				position: absolute;
+				color: white;
+				top: -9rem;
+				left: 5rem;
+				z-index: 2;
+				font-size: 2rem;
+				font-weight: bold;
+			}
+			#selection div a h5{
+				position: absolute;
+				color: white;
+				top: -5rem;
+				left: 5rem;
+				z-index: 2;
+				font-size: 1.5rem;
+			}
+			
+
+/*预约界面*/
+/*头部*/
+.bar-header{
+	color: slategray;
+	font-size: 1.5rem;
+}
+	.bar-header .right{
+		position: absolute;
+		right: 1rem;
+		top: 1rem;
+		color: deeppink;
+		font-size: 1.5rem;
+	}
+.bar-subheader{
+	height: 2.5rem;
+	padding: 0;
+}
+	.bar-subheader ul{
+		overflow: hidden;
+		margin: 0;
+		padding: 0.75rem 0;
+		width: 100%;
+	}
+		.bar-subheader ul li{
+			list-style: none;
+			float: left;
+			width: 25%;
+			text-align: center;
+			font-size: 1rem;
+			line-height: 1rem;
+			border-right: 1px solid darkgray;
+			color: darkgray;
+		}
+		.bar-subheader ul li:nth-child(4){
+			border: none;
+		}
+			.bar-subheader ul li i{
+				color: lightgray;
+			}
+/*主体*/
+.has-subheader.order{
+	top: 6.4rem;
+}
+.mySpinner{
+	display: block;
+	text-align: center;
+	height: 2rem;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+	.item-thumbnail-left{
+		height: 10rem;
+		margin-bottom: 0.5rem;
+	}
+		.item-thumbnail-left > img:first-child{
+			max-height: 5rem;
+		}
+.has-subheader .item.item-thumbnail-left.activated{
+	background: ghostwhite;
+}
+	.item-thumbnail-left .itemName{
+		font-size: 1.2rem;
+		color: gray;
+		margin-bottom: 0.8rem;
+	}
+	.item-thumbnail-left .itemPrice{
+		font-size: 1rem;
+		color: darkgrey;
+	}
+	.item-thumbnail-left .itemPostion{
+		font-size: 1rem;
+		color: darkgrey;
+		margin-bottom: 0.8rem;
+	}
+	.item-thumbnail-left .borderTop{
+		padding-top: 0.5rem;
+		border-top: 1px solid lightgray;
+		font-size: 1rem;
+		color: lightslategray;
+	}
+		.item-thumbnail-left .borderTop .red{
+			display: inline-block;
+			background: red;
+			color: white;
+			border-radius: 0.3rem;
+			padding: 0 0.2rem;
+			
+		}
+		.item-thumbnail-left .borderTop .blue{
+			display: inline-block;
+			background: deepskyblue;
+			color: white;
+			border-radius: 0.3rem;
+			padding: 0 0.2rem;
+			
+		}
+
+
+
+/*广场页面*/
+/*头部*/
+.guangchangTitle{
+	color: black;
+}
+.has-header.guangchang{
+	top: 2.4rem;
+}
+	.card.blue{
+		padding: 1.4rem 0;
+		text-align: center;
+		background: dodgerblue;
+		margin-bottom: 0 ;
+	}
+		.card.blue .item{
+			background: dodgerblue;
+		}
+			.card h3{
+				color: white;
+				font-size: 1.5rem;
+				font-weight:bold;
+			}
+			.card h4{
+				color: white;
+				font-size: 1.2rem;
+				font-weight: normal;
+			}
+	.card.left{
+		margin: 0 0.4rem 0 0.4rem;
+		padding: 1.4rem 0;
+		background:url(../img/guangchangBG1.jpg);
+		text-align: center;
+		
+	}
+	.card.right{
+		margin: 0 0.4rem 0 0.4rem;
+		padding: 1.4rem 0;
+		background:url(../img/guangchangBG2.jpg);
+		text-align: center;
+	}
+	.pTitle{
+		padding: 0.4rem 0.4rem 0.4rem 1.5rem;
+		margin-bottom: 0;
+	}
+		.pTitle span{
+			color: red;
+			font-size: 1.5rem;
+			margin-right: 1rem;
+		}
+	.card.four{
+		background:url(../img/guangchangBG3.jpg);
+		background-size: 100% 100%;
+		margin:0 0.8rem;
+	}
+	.fourbox{
+		border: 1px solid white;
+		width: 15rem;
+		text-align: center;
+		margin: 1rem auto;
+	}
+		.fourbox h3{
+			font-size: 1.3rem;
+			margin:1rem 0 0 0;
+			
+		}
+		.fourbox h4{
+			font-size: 1.3rem;
+			margin:0;
+			
+		}
+		.fourbox p{
+			margin: 0.5rem 1rem;
+			font-size: 0.8rem;
+			background: white;
+			text-align: center;
+		}
+	.qinghuayu{
+		margin: 0.5rem 1rem 1rem 1rem;
+		color: dimgray;
+		font-size: 1rem;
+	}
+	.card.five{
+		background: url(../img/guangchangBG5.jpg);
+		background-size: 100% 100%;
+		text-align: center;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-bottom: 1.5rem;
+		
+	}
+	.card.five h3{
+		margin-top: 2rem;
+		color: white;
+		font-size: 1.8rem;
+		margin-bottom: 0.5rem;
+	}
+	.card.five h6{
+		color: white;
+		margin-top: 0.5rem;
+		
+	}
+	.card.five span{
+		background: darkslategray;
+		color: white;
+		font-size: 1rem;
+		line-height: 1rem;
+		padding: 0.1rem 1rem;
+		margin-bottom: 1rem;
+	}
+	.card.six{
+		background: url(../img/guangchangBG4.jpg);
+		background-size: 100% 100%;
+		text-align: center;
+		margin-top: 0rem;
+		margin-bottom: 0rem;
+		padding-bottom: 2rem;
+		
+	}
+	.card.six h2{
+		color: white;
+		font-size: 1.8rem;
+		margin-top: 2rem;
+	}
+	.card.six span{
+		border: 1px solid white;
+		color: white;
+		padding: 0.5rem;
+	}
+	#cross{
+		position: relative;
+		height: 1rem;
+		border-top: 1px solid darkgray;
+		
+	}
+	.cross{
+		position: absolute;
+		top: -0.8rem;
+		background: #E6E6E6;
+		padding: 0 1rem;
+		left: 42%;
+		color: darkgray;
+	}
+
+
+
+
+/*个人页面*/
+.myHeader{
+	background: rgba(255,255,255,0.3);
+	position: fixed;
+	z-index: 222;
+	width: 100%;
+}
+.myHeader button{
+	background: rgba(255,255,255,0);
+	color: white;
+}
+.bgbox{
+	background: deeppink;
+	height: 45rem;
+	width: 100%;
+	position: relative;
+	margin-top: -20rem;
+	z-index: -1;
+	overflow: hidden;
+}
+.yuan{
+	background: white;
+	width: 300%;
+	height: 300%;
+	border-radius: 300%;
+	margin-top: 28rem;
+	margin-left: -100%;
+	position: absolute;
+}
+.fang{
+	width: 100%;
+	height: 15.6rem;
+	margin-top: 25rem;
+	margin-left: 40%;
+	position: absolute;
+	z-index: 22;
+	/*border: 1px solid gray;*/
+	
+	
+}.fang .out{
+	padding: 0.23rem;
+	background: white;
+	width: 6.4rem;
+	height: 6.4rem;
+	border-radius: 6.4rem;
+	
+}
+	
+	.fang .ion-android-person{
+		display: inline-block;
+		width: 6rem;
+		height: 6rem;
+		font-size: 7rem;
+		background: lightgray;
+		border-radius: 10rem;
+		text-align: center;
+		color: white;
+		overflow: hidden;
+		position: absolute;
+	}
+	.fang .buttonpt{
+		display: block;
+		margin-top: 8rem;
+		width: 100%;
+		border: 1px solid gainsboro;
+		background: white;
+		padding: 0.5rem;
+		color: gray;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+	.bgbox ul{
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		padding-bottom: 1rem;
+		border-top: 1px solid lightgray;
+	}
+	.bgbox ul li{
+		float: left;
+		width: 50%;
+		text-align: center;
+		font-size: 1.3rem;
+		line-height: 2rem;
+		margin-top: 1rem;
+		color: dimgray;
+	}
+	.pleft{
+		border-right: 1px solid lightgray;
+	}
+	.pleft i{
+		font-size: 2rem;
+		color: mediumspringgreen;
+	}
+	.pright i{
+		font-size: 2rem;
+		color: gold;
+	}
+	.list.friend{
+		margin: 0.5rem 0;
+	}
+	.item.item-icon-left.item-icon-right{
+		font-size: 1.2rem;
+		
+	}
+	.icon.ion-ios-arrow-right{
+		font-size: 1.5rem;
+	}
+.item.item-icon-left.item-icon-right.activated{
+	background: ghostwhite;
+}
+
+
+
+/*产品详情页*/
+/*头部*/
+.detail .back-text .default-title{
+	opacity: 0;
+}
+.detail .icon.ion-ios-arrow-back{
+	color: darkgray;
+}
+.detail .title.title-left{
+	text-align: center;
+}
+.detailHeader{
+	background: rgba(254,253,253,.3);
+	
+}
+.detailContent{
+	margin-top: -43px;
+}
+.titleImg{
+	max-width: 100%;
+	min-width: 100%;
+}
+.icon.ion-android-checkbox-outline{
+	color: deepskyblue;
+}
+
+.list.yuyue{
+	margin-bottom: 0;
+}
+.orderDay ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	background: white;
+	position: relative;
+}
+.orderDay ul li{
+	width: 25%;
+	text-align: center;
+	padding: 1rem 0;
+}
+.orderDay ul .liBottom{
+	position: absolute;
+	height: 0px;
+	padding: 0;
+	border: 1px solid red;
+	z-index: 222;
+	left: 0;
+	bottom: 0;
+}
+
+
+.srolldarg{
+	background: white;
+	width: 100%;
+	padding: 1rem;
+	border-top: 1px solid lightgray;
+}
+.srolldarg button{
+	width: 6%;
+	background: dodgerblue;
+	color: white;
+	border: none;
+	margin-right: 1rem;
+	padding: 0.5rem 0.1rem ;
+}
+.srolldarg div.scroll {
+	width:400%
+}
+
+.only{
+	background: white;
+	padding: 0.5rem;
+	border-top: 1px solid lightgray;
+	color: slategray;
+}
+
+.detailList{
+	background: white;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.detailList1{
+	padding: 1rem;
+	line-height: 2rem;
+	color: slategray;
+	overflow: hidden;
+}
+.detailList1>span{
+	float: left;
+}
+.detailList1 .phone{
+	font-size: 3rem;
+	color: red;
+	line-height: 4rem;
+	float: right;
+}
+.icon.ion-ios-location-outline{
+	font-size: 2rem;
+}
+.mapbox{
+	position: relative;
+}
+.map{
+	position: absolute;
+	right: 1rem;
+	font-size: 1rem;
+	color: deepskyblue;
+	border: 1px solid deepskyblue;
+	padding: 0 0.5rem;
+}
+.icon.ion-ios-time-outline{
+	font-size: 2rem;
+}
+.opentime{
+	font-size: 1rem;
+	color: slategray;
+}
+.list.pinglun{
+	background: white;
+	position: relative;
+	font-size: 1rem;
+	color: slategray;
+	margin-bottom: 1rem;
+}
+
+.say{
+	position: absolute;
+	left: 1.4rem;
+	background: red;
+	color: white;
+	font-size: 1rem;
+	padding: 0 0.3rem;
+}
+
+.bar-footer{
+	padding: 0;
+}
+.row{
+	text-align: center;
+	padding-top: 0;
+	font-size: 1rem;
+	color: slategray;
+}
+.row i.icon{
+	font-size: 1.5rem;
+}
+
+
+/*个人登陆页面*/
+.loginContent .item-input-wrapper{
+	background: white;
+}
+.button.button-small{
+	color: white;
+	background: lightgray;
+}
+.loginContent .list{
+	margin-bottom: 1rem;
+}
+.loginContent p{
+	text-align: center;
+	font-size: 1rem;
+	color: lightslategray;
+}
+.loginContent .button.button-block{
+	color: white;
+	background: lightgray;
+}
+.thridlogin{
+	margin-top: 15rem;
+	width: 100%;
+	height: 100%;
+}
+.thridlogin .cross{
+	font-size: 1rem;
+	left: 35%;
+
+}
+.button.button-small.red{
+	background: red;
+}
+.button.button-block.red2{
+	background: red;
+}
+
+.popup-body{
+	text-align: center;
+}

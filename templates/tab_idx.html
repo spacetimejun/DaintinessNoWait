@@ -1,0 +1,103 @@
+
+<ion-view class='bg'>
+	
+	<div id="searchBox">
+		<button id="btBg">
+			深圳
+			<i class="ion-chevron-down"></i>
+		</button>
+		<a href="#" id="aBg">
+		    <i class="icon ion-search"></i>
+		   请输入餐厅、菜式、商圈
+	 	</a>
+	</div>	
+    <ion-content has-bouncing='true' style='width: 100%;' on-scroll='change()' delegate-handle='content1'>
+    	
+    	
+        <!--轮播图-->
+		<ion-slide-box delegate-handle='slidebox0' auto-play='true' does-continue=' '>
+			<ion-slide ng-repeat='item in banner' >
+				<img class='bannerImg' ng-src="{{item}}" on-touch='ontouch($scope.event)'/>
+			</ion-slide>
+		</ion-slide-box>
+		
+		<!--取号、预约、扫描栏-->
+		<div id="tool" class="list">
+			<a  class="item" ng-click='toTab2()'>
+				<i class="icon ion-android-alarm-clock"></i>
+    			<span class="firstspan">排队取号</span><br />
+    			<span class="secondspan">火爆餐厅取号不等位</span>
+			</a>
+			<a  class="item" ng-click='toTab2()'>
+				<i class="icon ion-android-checkbox-outline"></i>
+    			<span class="firstspan">预约定座</span><br />
+    			<span class="secondspan">订座一秒成功不用等</span>
+			</a>
+			<a  class="item" href="#" id="btn0">
+				<i class="icon ion-android-expand"></i>
+    			<span class="firstspan">扫描号单</span><br />
+    			<span class="secondspan">随时掌握排队进展</span>
+			</a>
+		</div>
+		
+		<!--预约栏-->
+		<div id="order">
+			<p>
+				<i class="icon ion-android-checkbox-outline"></i>
+				立即预约
+				<span>可预约桌位看的见</span>
+			</p>
+			<p>
+				<span>
+					12月4日 明天 18:00 4人 
+					<i class="icon ion-arrow-down-b"></i>
+				</span>
+				<button>找餐厅</button>
+			</p>
+		</div>
+		
+		<!--功能栏-->
+		<div class="list" id="feature">
+			
+			<a class="item item-avatar" href="#" ng-repeat='item in feature'>
+		      	<img ng-src="{{item.img}}"/>
+		      	<h2>{{item.hName}}</h2>
+		      	<p>{{item.pName}}</p>
+		    </a>
+		   
+		</div>
+		
+		
+		<!--hot 热门-->
+		<div id="hot">
+			<p>
+				<span>|</span>
+				热门商家
+			</p>
+			<div >
+				<a href="#" ng-repeat='item in hot'>
+					<img ng-src="{{item.img}}"/>
+					<h4>{{item.name}}</h4>
+				</a>
+			</div>
+		</div>
+		
+		<!--精选 selection-->
+		<div id="selection">
+			<p>
+				<span>|</span>
+				精选商家
+			</p>
+			<div>
+				<a href="#" ng-repeat='item in selection'>
+					<img ng-src="{{item.img}}"/>
+					<h3>{{item.name}}</h3>
+					<h5>{{item.content}}</h5>
+				</a>
+			</div>
+		</div>
+		
+    </ion-content>
+</ion-view>
+
+

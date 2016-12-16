@@ -1,0 +1,54 @@
+<ion-view class='bg detail'  >
+	<ion-nav-bar >
+		<ion-nav-back-button>
+			
+		</ion-nav-back-button>
+		<ion-nav-title align-title="center">快捷登陆</ion-nav-title>
+	</ion-nav-bar>
+		
+	
+    <ion-content class='loginContent has-header'>
+    	<div class="list">
+		    <div class="item item-input-inset">
+			    <label class="item-input-wrapper">
+			      <input type="text" placeholder="手机号码" ng-change='phoneNum()' ng-model='number' autofocus="true" required="true">
+			    </label>
+			    <button id='yanzhengma' class="button button-small" ng-class="{'red':isRed}" ng-click='sendNum()' disabled>
+			      	获取验证码
+			    </button>
+		  	</div>
+			<div class="item item-input-inset">
+			    <label class="item-input-wrapper">
+			      <input type="text" placeholder="验证码" ng-change='testNum()' ng-model='writeNum.yzm' required="true">
+			    </label>
+			  
+		  	</div>
+		</div>
+    	<p>验证码将以短信形式发送到您手机，请注意查收</p>
+    	<div style="padding: 1rem;">
+	    	<button id="login" class="button button-block" disabled ng-class="{'red2':isRed2}"  ng-click='login()'>
+			 	登陆
+			</button>
+    	</div>
+    	
+    	<div class="thridlogin">
+    		<div id="cross">
+				<span class="cross">第三方账号登陆</span>
+			</div>
+			<div class="row">
+				<div class="col">
+					<span><img src="img/weibo.png" /></span><br />
+					新浪微博
+				</div>
+				<div class="col">
+					<span><img src="img/tencent-wechat.png" /></span><br />
+					腾讯微信
+				</div>
+			</div>
+    	</div>
+    	
+    	
+    	
+    </ion-content>
+    
+</ion-view>

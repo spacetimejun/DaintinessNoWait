@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"  />
+		<title>美味不用等</title>
+		<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="lib/ionic/js/ionic.bundle.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/ionic-cyf-directives.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app='app' ng-controller='controller'>
+		
+
+			<ion-nav-view> </ion-nav-view>
+
+			
+			<script id="tplTabs" type="text/ng-template">
+				<ion-view>
+				<!-- 用 cyf-tabs 替代 ion-tabs -->
+					<ion-tabs class="tabs-icon-top">
+					<!-- 用 cyf-tab 替代 ion-tab -->
+					<!-- 与 ion-tab 不同，cyf-tab 内会自动生成一个 ion-nav-view 用来渲染模板， -->
+					<!-- 属性 view-name 的值为该 tab 内的 ion-nav-view 的 name 属性的值 -->
+						<ion-tab view-name="view1" class='iconColor' title="首页" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" ui-sref="tabs.tab1">
+							<ion-nav-view name="view1"></ion-nav-view>
+						</ion-tab>
+						<ion-tab view-name="view2" class='iconColor' title="排队预约" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline" ui-sref="tabs.tab2">
+							<ion-nav-view name="view2"></ion-nav-view>
+						</ion-tab>
+						<ion-tab view-name="view3" class='iconColor' title="广场" icon-on="ion-ios-navigate" icon-off="ion-ios-navigate-outline" ui-sref="tabs.tab3">
+							<ion-nav-view name="view3"></ion-nav-view>
+						</ion-tab>
+						<ion-tab view-name="view4" class='iconColor' title="我的" icon-on="ion-ios-person" icon-off="ion-ios-person-outline" ui-sref="tabs.tab4">
+							<ion-nav-view name="view4"></ion-nav-view>
+						</ion-tab>
+					</ion-tabs>
+				</ion-view>
+			</script> 
+					
+					
+		
+		
+		<!--商品详情页-->
+	    <script id="templateDetail" type="text/ng-template">
+	        <ion-view >
+	        	<ion-nav-title></ion-nav-title>
+	            <ion-content>
+	               
+	                
+					
+					</div>
+	            </ion-content>
+	        </ion-view>
+	    </script>
+
+		
+	</body>
+	
+</html>

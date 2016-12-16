@@ -1,0 +1,94 @@
+<ion-view class='bg detail'  >
+	<ion-nav-bar class="detailHeader">
+		<ion-nav-back-button>
+			
+		</ion-nav-back-button>
+		<ion-nav-title align-title="center">{{name}}</ion-nav-title>
+	</ion-nav-bar>
+		
+	
+    <ion-content class='detailContent has-fooder'>
+    	
+    	<img src="{{img}}"/ class="titleImg">
+    	
+    	<div class="list yuyue">
+    		<a class="item item-icon-left item-icon-right" href="#">
+			    <i class="icon ion-android-checkbox-outline"></i>
+			    	预约订座
+			    <i class="icon ion-ios-arrow-right"></i>
+			 </a>
+    	</div>
+
+    	<div class="orderDay">
+    		<ul>
+    			<li ng-repeat='item in orderDays' ng-click="goWidth()">{{item.name}}</li>
+    			
+    			<li class="liBottom" style="left:{{x}};transition:all 500ms"></li>
+    		</ul>
+    		
+    	</div>
+		
+			
+		<ion-scroll direction='x'   class='srolldarg'>
+			<button ng-repeat='item in buttonlist'>{{item}}</button>
+		</ion-scroll>
+		
+		<div class="only">
+			<ul>
+				<li>今日剩余10桌可以预定</li>
+			</ul>
+		</div>
+		
+		<div class="list detailList">
+			<div class="detailList1">
+				<span>
+					{{name}}<br/>
+					<span style="color: gold;">
+			      		<i class="icon {{star.star1}}"></i>
+			      		<i class="icon {{star.star2}}"></i>
+			      		<i class="icon {{star.star3}}"></i>
+			      		<i class="icon {{star.star4}}"></i>
+			      		<i class="icon {{star.star5}}"></i>
+	      			</span> &nbsp;&nbsp;
+	      			 {{style}}&nbsp;&nbsp;
+	      			 <span class="itemPrice">{{price | currency:"&yen;"}}/人</span>
+				</span>
+				<i class="icon ion-ios-telephone phone"></i>
+			</div>
+			<a class="item item-icon-left item-icon-right mapbox" href="#">
+			    <i class="icon ion-ios-location-outline"></i>
+			    {{position}}
+			    <i class="map">地图</i>
+			 </a>
+			<a class="item item-icon-left opentime" href="#">
+			    <i class="icon ion-ios-time-outline"></i>
+			   	 营业时间：10:00~22:00
+			 </a>
+		</div>
+		
+		<div class="list pinglun">
+    		<a class="item item-icon-left item-icon-right" href="#">
+			    <i class="say">评</i>
+			    	查看大众点评的评论
+			    <i class="icon ion-ios-arrow-right"></i>
+			 </a>
+    	</div>
+    </ion-content>
+    <ion-footer-bar>
+    	<div class="row">
+		    <div class="col">
+		  		<i class="icon ion-clipboard"></i><br />
+		  		点菜
+		  	</div>
+		  	<div class="col">
+		  		<i class="icon ion-image"></i><br />
+		  		传照片
+		  	</div>
+		  	<div class="col">
+		  		<i class="icon ion-compose"></i><br />
+		  		我要吐槽
+		  	</div>
+		</div>
+    	
+    </ion-footer-bar>
+</ion-view>
